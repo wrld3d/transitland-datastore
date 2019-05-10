@@ -45,3 +45,6 @@ virtualenv/
 # Ignore attachments
 public/uploads/*
 vendor
+
+# Ignore vagrant
+.vagrant/
