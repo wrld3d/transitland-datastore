@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ['modifyvm', :id,'--memory', '4096']
   end
 
-  config.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: [".git/", "postgres-data/"], rsync__chown: false
+  config.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: [".git/", "postgres-data/", "db/sample-changesets/", "gtfs/"], rsync__chown: false
   config.vm.network "private_network", ip: "192.168.3.10"
   config.vm.network "forwarded_port", guest: 3000, host: 3000
   

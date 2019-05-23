@@ -8,7 +8,7 @@ POSTGRES_DB=transitland_datastore
 # application.yml
 ADMIN_USERNAME=onlyneedonproduction
 ADMIN_PASSWORD=onlyneedonproduction
-TRANSITLAND_DATASTORE_HOST=http://localhost:3000
+TRANSITLAND_DATASTORE_HOST=http://transitland-staging.wrld3d.com:3000
 AUTO_CONFLATE_STOPS_WITH_OSM=false
 MAX_HOURS_SINCE_LAST_CONFLATE=84
 TYR_AUTH_TOKEN=get one from mapzen.com/developers
