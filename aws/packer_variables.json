@@ -1,0 +1,7 @@
+{
+    "aws_access_key":"",
+    "aws_secret_key":"",
+    "wrld_transitland_datastore_deployment_key":"",
+    "deploy_env":"staging",
+    "transitland_token":""
+}
