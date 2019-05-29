@@ -13,7 +13,7 @@
       "region": "us-east-1",
       "instance_type": "t2.small",
       "ssh_username": "ec2-user",
-      "ami_name": "transitland_packer_image_{{timestamp}}",
+      "ami_name": "transitland_{{user `deploy_env`}}_packer_image_{{timestamp}}",
       "source_ami": "ami-0080e4c5bc078760e",
       "vpc_id": "vpc-83a2fbe6",
       "subnet_id": "subnet-be452fc9",
