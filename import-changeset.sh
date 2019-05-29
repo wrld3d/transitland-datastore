@@ -41,14 +41,14 @@ readonly changeset_path=./db/sample-changesets
 readonly gtfs_path=./gtfs
 
 readonly changeset_bucket="s3://wrld-routing-service/transitland-$TRANSITLAND_ENV-changesets"
-readonly rtfs_bucket="s3://wrld-routing-service/transitland-$TRANSITLAND_ENV-rtfs/$timestamp"
+readonly gtfs_bucket="s3://wrld-routing-service/transitland-$TRANSITLAND_ENV-gtfs/$timestamp"
 echo "Downloading data..."
 for operator in $operators
 do
     echo "Downloading changeset for $operator from $changeset_bucket/$operator.json"
     aws s3 cp "$changeset_bucket/$operator.json" "$changeset_path"
-    echo "Downloading rtfs for $operator from $rtfs_bucket/$operator.zip"
-    aws s3 cp "$rtfs_bucket/$operator.zip" "$gtfs_path"
+    echo "Downloading gtfs for $operator from $gtfs_bucket/$operator.zip"
+    aws s3 cp "$gtfs_bucket/$operator.zip" "$gtfs_path"
 done
 echo "Downloaded data"
 

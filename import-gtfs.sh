@@ -40,12 +40,12 @@ readonly timestamp=$1
 readonly operators=$2
 readonly gtfs_path=./gtfs
 
-readonly rtfs_bucket="s3://wrld-routing-service/transitland-$TRANSITLAND_ENV-rtfs/$timestamp"
+readonly gtfs_bucket="s3://wrld-routing-service/transitland-$TRANSITLAND_ENV-gtfs/$timestamp"
 echo "Downloading gtfs data..."
 for operator in $operators
 do
-    echo "Downloading rtfs for $operator from $rtfs_bucket/$operator.zip"
-    aws s3 cp "$rtfs_bucket/$operator.zip" "$gtfs_path"
+    echo "Downloading gtfs for $operator from $gtfs_bucket/$operator.zip"
+    aws s3 cp "$gtfs_bucket/$operator.zip" "$gtfs_path"
 done
 echo "Downloaded gtfs data"
 
