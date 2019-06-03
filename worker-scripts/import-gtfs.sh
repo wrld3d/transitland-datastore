@@ -28,6 +28,7 @@ fi
 
 readonly transitland_token=$1
 readonly operators=$2
+readonly import_level=2
 
 for operator in $operators
 do
@@ -51,5 +52,5 @@ do
     echo "Latest feed version sha1: $latest_version"
 
     echo "Launching feed eater"
-    curl -s -X POST -H "Authorization: Token token=$transitland_token" "http://localhost:3000/api/v1/webhooks/feed_eater?feed_onestop_id=f-$operator&feed_version_sha1=$latest_version"
+    curl -s -X POST -H "Authorization: Token token=$transitland_token" "http://localhost:3000/api/v1/webhooks/feed_eater?feed_onestop_id=f-$operator&feed_version_sha1=$latest_version&import_level=$import_level"
 done
